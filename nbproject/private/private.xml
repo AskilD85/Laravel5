@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/OSPanel/domains/blog/routes/web.php</file>
+            <file>file:/D:/OSPanel/domains/blog/resources/views/admin/layouts/app_admin.blade.php</file>
+            <file>file:/D:/OSPanel/domains/blog/resources/views/layouts/app.blade.php</file>
+            <file>file:/D:/OSPanel/domains/blog/resources/views/home.blade.php</file>
+            <file>file:/D:/OSPanel/domains/blog/database/migrations/2019_02_02_170950_create_categories_table.php</file>
+            <file>file:/D:/OSPanel/domains/blog/resources/views/admin/dashboard.blade.php</file>
+            <file>file:/D:/OSPanel/domains/blog/resources/views/admin/components/breadcrumb.blade.php</file>
+            <file>file:/D:/OSPanel/domains/blog/app/Http/Controllers/Admin/DashboardController.php</file>
+            <file>file:/D:/OSPanel/domains/blog/resources/views/admin/categories/index.blade.php</file>
+            <file>file:/D:/OSPanel/domains/blog/app/Http/Controllers/HomeController.php</file>
+            <file>file:/D:/OSPanel/domains/blog/app/Http/Controllers/Admin/CategoryController.php</file>
+        </group>
+    </open-files>
+</project-private>
