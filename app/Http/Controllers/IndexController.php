@@ -8,7 +8,7 @@ class IndexController extends Controller
 {
     public function index() {
         $title ='Сука - Spot - Bootstrap Freelance Template';
-        $name="";
+        $name="Имя";
         return view('page')->with(['title'=>$title,'name'=>$name]);
     }
 }
