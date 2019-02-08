@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $this->title="Админка";
+        return view('home')->with(['title'=>$this->title]);
     }
 }

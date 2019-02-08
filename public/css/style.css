@@ -48,6 +48,21 @@ a:hover, a:focus {
   text-decoration: none;
   outline: 0;
 }
+.dashboard-panel{
+    min-height: 80vh;
+    height: auto;
+    margin: 20px 0;
+}
+.new{
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    min-height: 250px;
+}
+
+img {
+    margin: 10px;
+}
 
 a:before, a:after {
   transition: color 0.1s ease-in, background 0.1s ease-in;

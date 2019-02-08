@@ -1,99 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{$title}}</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+@extends ('layouts.site') 
 
-  <!-- Favicons -->
-  <link href="{{asset('img/favicon.png')}}" rel="icon">
-  <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:400,300,700,900" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="{{asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
-  <!-- =======================================================
-    Template Name: Spot
-    Template URL: https://templatemag.com/spot-bootstrap-freelance-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
-</head>
-
-<body>
-
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        <a class="navbar-brand" href="#">SP<i class="fa fa-circle"></i>T</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="/">HOME</a></li>
-          <li><a href="/about">ABOUT</a></li>
-          <li><a href="/services">SERVICES</a></li>
-          <li><a href="/works">WORKS</a></li>
-          <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-  </div>
-
-  <div id="headerwrap">
-    <div class="container">
-      <div class="row centered">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>It Doesn't Take a Rocket <b>Scientist</b></h1>
-          <h2>It Takes a Designer</h2>
-        </div>
-      </div>
-      <!-- row -->
-    </div>
-    <!-- container -->
-  </div>
-  <!-- headerwrap -->
-
+@section('content')
   <div class="container w">
-    <div class="row centered">
+    <div class="row">
       <br><br>
-      <div class="col-lg-4">
-        <i class="fa fa-heart"></i>
-        <h4>DESIGN</h4>
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-      </div>
-      <!-- col-lg-4 -->
-
-      <div class="col-lg-4">
-        <i class="fa fa-laptop"></i>
-        <h4>BOOTSTRAP</h4>
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-      </div>
-      <!-- col-lg-4 -->
-
-      <div class="col-lg-4">
-        <i class="fa fa-trophy"></i>
-        <h4>SUPPORT</h4>
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
-      </div>
-      <!-- col-lg-4 -->
+     
+        @foreach ($news as $new)
+            
+           <div class="">
+               
+                <h4>{{ $new->title }}</h4>
+                <p>{{ $new->text }}
+                <a href="{{ route('NewShow',['id'=>$new->id]) }}" role="button">Подробнее</a>
+                </p>
+            </div> 
+        @endforeach;
+      
     </div>
     <!-- row -->
     <br>
@@ -101,7 +23,7 @@
   </div>
   <!-- container -->
 
-  <!-- PORTFOLIO SECTION -->
+   <!-- PORTFOLIO SECTION -->
   <div id="dg">
     <div class="container">
       <div class="row centered">
@@ -109,19 +31,19 @@
         <br>
         <div class="col-lg-4">
           <div class="tilt">
-            <a href="#"><img src="img/p01.png" alt=""></a>
+            <a href="#"><img src="{{asset('img/p01.png')}}" alt=""></a>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="tilt">
-            <a href="#"><img src="img/p03.png" alt=""></a>
+            <a href="#"><img src="{{asset('img/p02.png')}}" alt=""></a>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="tilt">
-            <a href="#"><img src="img/p02.png" alt=""></a>
+            <a href="#"><img src="{{asset('img/p03.png')}}" alt=""></a>
           </div>
         </div>
       </div>
@@ -143,7 +65,7 @@
       </div>
       <div class="col-lg-2"></div>
       <div class="col-lg-10 col-lg-offset-1">
-        <img class="img-responsive" src="img/munter.png" alt="">
+        <img class="img-responsive" src="{{asset('img/munter.png')}}" alt="">
       </div>
     </div>
     <!-- row -->
@@ -155,19 +77,19 @@
       <div class="row centered">
         <h4>OUR AWESOME CLIENTS</h4>
         <div class="col-lg-2 col-lg-offset-1">
-          <img src="img/c01.gif" alt="">
+          <img src="{{asset('img/c01.gif')}}" alt="">
         </div>
         <div class="col-lg-2">
-          <img src="img/c02.gif" alt="">
+          <img src="{{asset('img/c02.gif')}}" alt="">
         </div>
         <div class="col-lg-2">
-          <img src="img/c03.gif" alt="">
+          <img src="{{asset('img/c03.gif')}}" alt="">
         </div>
         <div class="col-lg-2">
-          <img src="img/c04.gif" alt="">
+          <img src="{{asset('img/c04.gif')}}" alt="">
         </div>
         <div class="col-lg-2">
-          <img src="img/c05.gif" alt="">
+          <img src="{{asset('img/c05.gif')}}" alt="">
         </div>
       </div>
       <!-- row -->
@@ -259,32 +181,4 @@
     <!-- /.modal-dialog -->
   </div>
   <!-- /.modal -->
-
-  <div id="copyrights">
-    <div class="container">
-      <p>
-        &copy; Copyrights <strong>Spot</strong>. All Rights Reserved
-      </p>
-      <div class="credits">
-        <!--
-          You are NOT allowed to delete the credit link to TemplateMag with free version.
-          You can delete the credit link only if you bought the pro version.
-          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/spot-bootstrap-freelance-template/
-          Licensing information: https://templatemag.com/license/
-        -->
-        Created with Spot template by <a href="https://templatemag.com/">TemplateMag</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-  <script src="lib/chart/chart.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
-</body>
-</html>
+  @endsection
