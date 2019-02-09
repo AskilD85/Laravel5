@@ -61,6 +61,7 @@
                             </div>
                         </div>
                     </form>
+                    <div><p>Пароль для Администратора:<br/>login:&nbspaskildar@yandex.ru<br/>password:&nbspmagnitka</p></div>
                 </div>
             </div>
         </div>
